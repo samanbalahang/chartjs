@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="chart.js"></script>
+    <script src="chart.umd.js"></script>
+
+    <!-- <script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    // type: 'bar',
+    // type: 'line',
+    type: 'bubble',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    // options: {
+    //   scales: {
+    //     y: {
+    //       beginAtZero: true
+    //     }
+    //   }
+//   }
+    options: {
+        aspectRatio: 1,
+        scales: {
+          x: {
+            max: 500
+          },
+          y: {
+            max: 500
+          }
+      },
+    },
+  });
+</script> -->
+    <!-- <script>
+const ctx = document.getElementById('myChart');
+const labels = ["jan","feb","mar","Apr","may","june","july"];
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'My First Dataset',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+    borderWidth: 1
+  }]
+};
+const config = {
+  type: 'bar',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+};
+new Chart(ctx, {
+  type: 'bar',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+
+}); 
+</script> -->
+    <!-- <script>
+        const ctx = document.getElementById('myChart');
+        const labels = ["jan", "feb", "mar", "Apr", "may", "june", "july"];
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First Dataset',
+                data: [65, 59, 80, 81, 56, 55, 40],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)'
+                ],
+                borderColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 159, 64)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)',
+                    'rgb(153, 102, 255)',
+                    'rgb(201, 203, 207)'
+                ],
+                borderWidth: 1
+            }]
+        };
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                indexAxis: 'y',
+            }
+        };
+        new Chart(ctx, config);
+    </script> -->
+    <!-- <script>
+        const ctx = document.getElementById('myChart');
+        const data = {
+            datasets: [{
+                label: 'First Dataset',
+                data: [{
+                    x: 20,
+                    y: 30,
+                    r: 15
+                },{
+                    x: 30,
+                    y: 20,
+                    r: 12
+                }, {
+                    x: 40,
+                    y: 10,
+                    r: 10
+                }],
+                backgroundColor: 'rgb(255, 99, 132)'
+            }]
+        };
+        const config = {
+            type: 'bubble',
+            data: data,
+            options: {}
+        };
+        new Chart(ctx, config);
+    </script> -->
+    <!-- <script>
+        const ctx = document.getElementById('myChart');
+        const data = {
+            labels: [
+                'Red',
+                'Blue',
+                'Yellow'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const config = {
+            type: 'doughnut',
+            data: data,
+        };
+        new Chart(ctx, config);
+    </script> -->
+    <!-- <script>
+        const ctx = document.getElementById('myChart');
+        const data = {
+            labels: [
+                'Red',
+                'Blue',
+                'Yellow'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const config = {
+            type: 'pie',
+            data: data,
+        };
+        new Chart(ctx, config);
+    </script> -->
+    <!-- <script>
+         const ctx = document.getElementById('myChart');
+        const data = {
+            labels: [
+                'Red',
+                'Green',
+                'Yellow',
+                'Grey',
+                'Blue'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [11, 16, 7, 3, 14],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(75, 192, 192)',
+                    'rgb(255, 205, 86)',
+                    'rgb(201, 203, 207)',
+                    'rgb(54, 162, 235)'
+                ]
+            }]
+        };
+        const config = {
+            type: 'polarArea',
+            data: data,
+            options: {}
+        };
+        new Chart(ctx, config);
+    </script> -->
+    <!-- <script>
+        const ctx = document.getElementById('myChart');
+        const data = {
+            labels: [
+                'Eating',
+                'Drinking',
+                'Sleeping',
+                'Designing',
+                'Coding',
+                'Cycling',
+                'Running'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [65, 59, 90, 81, 56, 55, 40],
+                fill: true,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+            }, {
+                label: 'My Second Dataset',
+                data: [28, 48, 40, 19, 96, 27, 100],
+                fill: true,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgb(54, 162, 235)',
+                pointBackgroundColor: 'rgb(54, 162, 235)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(54, 162, 235)'
+            }]
+        };
+        const config = {
+            type: 'radar',
+            data: data,
+            options: {
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                }
+            },
+        };
+        new Chart(ctx, config);
+    </script> -->
+    <script>
+        const ctx = document.getElementById('myChart');
+        const data = {
+            datasets: [{
+                label: 'Scatter Dataset',
+                data: [{
+                    x: -10,
+                    y: 0
+                }, {
+                    x: 0,
+                    y: 10
+                }, {
+                    x: 10,
+                    y: 5
+                }, {
+                    x: 0.5,
+                    y: 5.5
+                }],
+                backgroundColor: 'rgb(255, 99, 132)'
+            }],
+        };
+        const config = {
+            type: 'scatter',
+            data: data,
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    }
+                }
+            }
+        };
+        new Chart(ctx, config);
+    </script>
+</body>
+
+</html>
